@@ -38,25 +38,11 @@ function useFadeInOnDelay(ref: React.RefObject<HTMLDivElement>, delay: number = 
         const node = ref.current;
         if (!node) return;
         node.classList.remove('is-visible');
-        let hasFadedIn = false;
         let timeoutId: any = null;
-        const handleScroll = () => {
-            if (hasFadedIn) return;
-            const rect = node.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 60) {
-                if (!node.classList.contains('is-visible')) {
-                    if (timeoutId) clearTimeout(timeoutId);
-                    timeoutId = setTimeout(() => {
-                        node.classList.add('is-visible');
-                        hasFadedIn = true;
-                    }, delay * 1000);
-                }
-            }
-        };
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
+        timeoutId = setTimeout(() => {
+            node.classList.add('is-visible');
+        }, delay * 1000);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
             if (timeoutId) clearTimeout(timeoutId);
         };
     }, [ref, delay]);
