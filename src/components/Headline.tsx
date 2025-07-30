@@ -32,8 +32,8 @@ const Headline: React.FC<HeadlineProps> = ({
             <a href="mailto:toccidylan@gmail.com" aria-label="Email">
                 {/* Bold Outline Email SVG */}
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="4" width="20" height="16" rx="3" fill="none" stroke="white" />
-                  <polyline points="22,6 12,15 2,6" fill="none" stroke="white" strokeWidth="2" />
+                    <rect x="2" y="4" width="20" height="16" rx="3" fill="none" stroke="white" />
+                    <polyline points="22,6 12,15 2,6" fill="none" stroke="white" strokeWidth="2" />
                 </svg>
             </a>
             <a href="/dylan_tocci_resume.pdf" target="_blank" aria-label="Resume">
