@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './ProjectCard.css';
+import '../css/ProjectCard.css';
 
 
 interface ProjectCardProps {

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
 import SkillsSection from './SkillsSection';
-import './InfoSection.css';
+import '../css/InfoSection.css';
 
 // Brand new scroll fade-in hook (does not reuse any existing fade-in logic)
 function useScrollFadeIn(ref: React.RefObject<HTMLDivElement>) {
