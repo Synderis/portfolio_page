@@ -1,0 +1,91 @@
+/* index.css or App.css */
+
+.hero {
+    text-align: center;
+    /* padding: 3rem 1rem; */
+    color: white;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+.topline {
+    width: 50vw;
+    max-width: 700px;
+    min-width: 80px;
+    border: none;
+    border-top: 2px solid white;
+    opacity: 0.4;
+    margin: 32px auto 0 auto;
+}
+
+/* Media query must be outside the selector block */
+@media (max-width: 600px) {
+    .topline {
+        width: 50vw;
+        max-width: 300px;
+        margin: 24px auto 0 auto;
+    }
+}
+
+.bottomline {
+    width: 40vw;
+    max-width: 600px;
+    min-width: 80px;
+    border: none;
+    border-top: 1px solid white;
+    opacity: 0.4;
+    margin: 32px auto 0 auto;
+}
+
+@media (max-width: 600px) {
+    .bottomline {
+        width: 70vw;
+        max-width: 300px;
+        margin: 24px auto 0 auto;
+    }
+}
+
+.headline h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 32px 0 16px 0;
+}
+
+.subtitle {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.nav-buttons button {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background: white;
+    color: black;
+}
