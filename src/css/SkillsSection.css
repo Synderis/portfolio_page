@@ -1,0 +1,8 @@
+.skill-icon {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.skill-icon:hover {
+    transform: scale(1.10);
+}
