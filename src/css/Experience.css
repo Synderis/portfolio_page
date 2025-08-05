@@ -1,0 +1,219 @@
+.experience {
+  position: relative;
+}
+
+.experience-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.section-header h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+}
+
+.experience-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.experience-card {
+  position: relative;
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-medium);
+  overflow: hidden;
+}
+
+.experience-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.work-card {
+  border-left: 4px solid #3b82f6;
+}
+
+.education-card {
+  border-left: 4px solid #10b981;
+}
+
+.card-header {
+  margin-bottom: var(--spacing-sm);
+}
+
+.job-title,
+.degree-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.job-meta,
+.edu-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.company,
+.institution {
+  font-weight: 500;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.job-period,
+.edu-period {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.job-description {
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  opacity: 0.1;
+  transition: all var(--transition-medium);
+}
+
+.work-decoration {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+}
+
+.education-decoration {
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+}
+
+.experience-card:hover .card-decoration {
+  opacity: 0.2;
+  transform: scale(1.1);
+}
+
+/* Timeline connector for visual appeal */
+.experience-column::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 230px;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-border);
+  opacity: 0.3;
+}
+
+.experience-column:first-child::before {
+  left: calc(50% - 1px);
+}
+
+.experience-column:last-child::before {
+  right: calc(50% - 1px);
+  left: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .experience-grid {
+    gap: var(--spacing-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3xl);
+  }
+  
+  .experience-column::before {
+    display: none;
+  }
+  
+  .column-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .experience-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .job-title,
+  .degree-title {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-card {
+    padding: var(--spacing-md);
+  }
+  
+  .column-title {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .job-meta,
+  .edu-meta {
+    align-items: flex-start;
+  }
+  
+  .card-decoration {
+    width: 40px;
+    height: 40px;
+  }
+}
