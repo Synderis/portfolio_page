@@ -135,13 +135,6 @@ src/
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Contact
-
-**Dylan Tocci**
-- GitHub: [Synderis](https://github.com/Synderis)
-- LinkedIn: [Dylan Tocci](https://www.linkedin.com/in/dylan-tocci-69198929a)
-- Email: toccidylan@gmail.com
-
 ---
 
 Built with ❤️ using React, TypeScript, and modern web technologies.
