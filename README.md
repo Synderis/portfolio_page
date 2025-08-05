@@ -131,10 +131,6 @@ src/
 - Safari 14+
 - Edge 90+
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
 Built with ❤️ using React, TypeScript, and modern web technologies.
