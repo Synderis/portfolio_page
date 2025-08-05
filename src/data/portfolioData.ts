@@ -4,22 +4,18 @@ export const headlineData = {
     contacts: [
         {
             href: 'https://github.com/Synderis',
-            icon: 'icons/github.svg',
             label: 'GitHub'
         },
         {
             href: 'https://www.linkedin.com/in/dylan-tocci-69198929a',
-            icon: 'icons/linkedin.svg',
             label: 'LinkedIn'
         },
         {
             href: 'mailto:toccidylan@gmail.com',
-            icon: 'icons/email.svg',
             label: 'Email'
         },
         {
             href: '/dylan_tocci_resume.pdf',
-            icon: 'icons/resume.svg',
             label: 'Resume'
         }
     ]
