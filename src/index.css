@@ -59,7 +59,7 @@
 [data-theme="light"] {
   --color-primary: var(--color-black);
   --color-secondary: var(--color-charcoal);
-  --color-text: var(--color-black);
+  --color-text: var(--color-slate);
   --color-text-muted: var(--color-gray-600);
   --color-background: var(--color-white);
   --color-surface: var(--color-gray-100);
@@ -116,7 +116,7 @@ h5 { font-size: clamp(1.125rem, 2vw, 1.25rem); }
 h6 { font-size: 1rem; }
 
 p {
-  /* margin-bottom: var(--spacing-md); */
+  margin-bottom: var(--spacing-md);
   color: var(--color-text);
 }
 

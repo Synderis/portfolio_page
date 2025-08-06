@@ -4,18 +4,22 @@ export const headlineData = {
     contacts: [
         {
             href: 'https://github.com/Synderis',
+            icon: 'icons/github.svg',
             label: 'GitHub'
         },
         {
             href: 'https://www.linkedin.com/in/dylan-tocci-69198929a',
+            icon: 'icons/linkedin.svg',
             label: 'LinkedIn'
         },
         {
             href: 'mailto:toccidylan@gmail.com',
+            icon: 'icons/email.svg',
             label: 'Email'
         },
         {
             href: '/dylan_tocci_resume.pdf',
+            icon: 'icons/resume.svg',
             label: 'Resume'
         }
     ]
@@ -105,12 +109,13 @@ export const projects = [
         title: "E-commerce Website",
         description: "A full-featured e-commerce platform built with TypeScript and FastAPI.",
         detailedDescription: [
-            "A fully functional e-commerce site built using FastAPI, React, and TypeScript, with a PostgreSQL database and stripe payment integration.",
+            "A modern e-commerce site built using FastAPI, React, and TypeScript, with a sleek and responsive design using Tailwind CSS.",
             "",
             "Key Features:",
             "• FastAPI Backend - Modern, fast web framework for building APIs",
             "• PostgreSQL - Highly customizable database for users, products, orders", 
             "• Frontend written with TypeScript/React",
+            "• Tailwind CSS for responsive and consistent design",
             "• Complete user authentication and account management",
             "• Shopping cart and order processing system",
             "• Product catalog with detailed product pages",
@@ -143,7 +148,8 @@ export const projects = [
             "• Statistical analysis with probability density visualization",
             "• Machine learning time prediction based on combat inputs",
             "• Random Forest Regression for accurate time estimates",
-            "• Interactive frontend built with React"
+            "• Flask backend with SQL database for result storage",
+            "• Interactive frontend built with HTML, CSS, and JavaScript"
         ],
         link: "https://github.com/Synderis/tekton_sim_app",
         imageUrl: "https://i.imgur.com/VM2d0ll.png",
@@ -155,3 +161,45 @@ export const projects = [
         techStack: ["Python", "TypeScript", "Machine Learning", "Statistics"]
     }
 ];
+
+export const aboutMe = {
+    title: "About Me",
+    description: "I am a passionate software developer with experience in building web applications using modern technologies.",
+    sectionDetails: {
+        background: {
+            sectionTitle: "Background",
+            details: [
+                "My background originates from a strong foundation in mathematics, which has equipped me with analytical and problem-solving skills essential for software development.",
+                "I have a keen interest in data engineering and software development, and I enjoy creating efficient, scalable applications that enhance user experience.",
+                "I enjoy working with both frontend and backend technologies, and I am always eager to learn new skills and frameworks.",
+                "In my free time, I like building personal projects, powerlifting, and speedrunning games.",
+            ],
+            links: []
+        },
+        powerlifting: {
+            sectionTitle: "Powerlifting",
+            details: [
+                "When I used to compete in powerlifting, I broke the collegiate national record for bench and squat in my weight class.",
+                "I also won first place at collegiate nationals in my weight class.",
+            ],
+            links: { href: 'https://usapl.liftingdatabase.com/lifters-view?id=42073', text: 'My Powerlifting Profile', imgUrl: 'https://imgur.com/T1LTjHY.png' },
+        },
+        gaming: {
+            sectionTitle: "Gaming and Speedrunning",
+            details: [
+                "When I used to seriously speedrun, I held 7th place in the world (twice) for the game Old School RuneScape in the solo Chambers of Xeric category.",
+                "I also made a few guide videos on YouTube for Old School RuneScape Chambers of Xeric speedrunning.",
+                "I also used to play a lot of League of Legends, where I peaked at diamond 3.",
+                "I also like to stream on twitch whether it be coding, gaming, coaching, or just chatting.",
+            ],
+            links: [
+                { href: 'https://youtube.com/playlist?list=PLe9vJR7gl_-O-1GZSsEq6cYLiwrR-y6pS&si=WfGeWlL3ikKIbVFR', text: 'My Speedrunning Guides' },
+                { href: 'https://youtu.be/YghSwVnY5Ds', text: 'My First Top 10 Time' },
+                { href: 'https://youtu.be/IdBLAmT9_1w', text: 'My Second Top 10 Time' },
+                { href: 'https://www.twitch.tv/synderis', text: 'My Twitch Channel' },
+                { href: 'https://op.gg/lol/summoners/na/SidelaneTerror-NA1', text: 'My League of Legends Profile', imgUrl: 'https://i.imgur.com/doLUNnE.png' }
+
+            ]
+        }
+    }
+};

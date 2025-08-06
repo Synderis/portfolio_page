@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {  Download } from 'lucide-react';
+import { Download, User, ChevronDown } from 'lucide-react';
 import { headlineData } from '../data/portfolioData';
+import AboutModal from './AboutModal';
 import '../css/Hero.css';
 
 const Hero: React.FC = () => {
+  const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
+
   const scrollToNext = () => {
     const nextSection = document.getElementById('skills');
     if (nextSection) {
@@ -70,6 +73,13 @@ const Hero: React.FC = () => {
                 <Download size={18} />
                 Download Resume
               </a>
+              <button
+                onClick={() => setIsAboutModalOpen(true)}
+                className="btn btn-secondary"
+              >
+                <User size={18} />
+                My Hobbies
+              </button>
             </motion.div>
           </div>
         </div>
@@ -83,16 +93,22 @@ const Hero: React.FC = () => {
         >
           <div className="scroll-line"></div>
           <motion.div
-            className="scroll-dot"
-            animate={{ y: [0, 20, 0] }}
+            className="scroll-arrow"
+            animate={{ y: [0, 10, 0] }}
             transition={{ 
               duration: 1.5, 
               repeat: Infinity, 
               ease: "easeInOut" 
             }}
-          />
+          >
+            <ChevronDown size={24} />
+          </motion.div>
         </motion.div>
       </div>
+      <AboutModal 
+        isOpen={isAboutModalOpen}
+        onClose={() => setIsAboutModalOpen(false)}
+      />
     </section>
   );
 };
