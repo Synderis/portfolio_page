@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Calendar, GraduationCap, Briefcase } from 'lucide-react';
 import { workExperience, education } from '../data/portfolioData';
@@ -6,7 +6,18 @@ import '../css/Experience.css';
 
 const Experience: React.FC = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
+  const isInView = useInView(ref, { once: true, amount: isMobile ? 0.1 : 0.2 });
 
   const containerVariants = {
     hidden: { opacity: 0 },

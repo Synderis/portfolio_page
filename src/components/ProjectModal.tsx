@@ -86,12 +86,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose, project })
                         <button className="modal-close" onClick={onClose}>
                             <X size={24} />
                         </button>
-
                         <div className="modal-scroll-wrapper">
                             <div className="modal-header">
                                 <h2 className="modal-title">{project.title}</h2>
                             </div>
-
                             <div className="modal-body">
                                 {project.images.length > 0 && (
                                     <div className="image-gallery">
@@ -125,7 +123,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose, project })
                                         )}
                                     </div>
                                 )}
-
                                 <div className="project-details">
                                     <div className="modal-project-description">
                                         <h3>About this Project</h3>
@@ -133,7 +130,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose, project })
                                             ? project.detailedDescription.join('\n')
                                             : project.detailedDescription}</p>
                                     </div>
-
                                     {project.techStack && project.techStack.length > 0 && (
                                         <div className="tech-stack-section">
                                             <h3>Technologies Used</h3>
