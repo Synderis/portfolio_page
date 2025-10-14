@@ -1,6 +1,6 @@
 export const headlineData = {
     name: 'DYLAN TOCCI',
-    subtitle: 'Software Engineer, Data Engineer, Web Developer, and Speedrunner',
+    subtitle: 'Software Engineer, Data Engineer, Web Developer, Powerlifter, and Speedrunner',
     contacts: [
         {
             href: 'https://github.com/Synderis',
@@ -39,9 +39,6 @@ export const skills = [
         name: 'CSS', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS', icon: '/icons/css.svg' 
     },
     { 
-        name: 'HTML 5', href: 'https://developer.mozilla.org/en-US/docs/Web/HTML', icon: '/icons/html-5.svg' 
-    },
-    { 
         name: 'Snowflake', href: 'https://www.snowflake.com/', icon: '/icons/snowflake.svg' 
     },
     { 
@@ -49,6 +46,9 @@ export const skills = [
     },
     { 
         name: 'Docker', href: 'https://www.docker.com/', icon: '/icons/docker.svg' 
+    },
+    {
+        name: 'Rust', href: 'https://www.rust-lang.org/', icon: '/icons/rust.svg'
     },
     { 
         name: 'AWS', href: 'https://aws.amazon.com/', icon: '/icons/aws.svg' 
@@ -136,29 +136,28 @@ export const projects = [
         techStack: ["Python", "TypeScript", "FastAPI", "PostgreSQL"]
     },
     {
-        title: "Tekton Simulator",
-        description: "A web application for simulating a boss fight in Old School RuneScape.",
+        title: "OSRS Solo Raid Simulator",
+        description: "A web application for simulating an entire raid in Old School RuneScape.",
         detailedDescription: [
-            "A comprehensive simulation tool for the Tekton boss fight in Old School RuneScape. Users can select gear through an interactive table interface and analyze combat results.",
+            "A comprehensive simulation tool for Challenge Mode Chambers of Xeric in Old School RuneScape. Users can select gear, rooms, and strategies and simulate combat results for theorycrafting.",
             "",
             "Features:",
             "• Gear selection interface with comprehensive equipment options",
-            "• Combat simulation with probability density analysis",
-            "• Results comparison against custom HP values",
-            "• Statistical analysis with probability density visualization",
-            "• Machine learning time prediction based on combat inputs",
-            "• Random Forest Regression for accurate time estimates",
-            "• Flask backend with SQL database for result storage",
-            "• Interactive frontend built with HTML, CSS, and JavaScript"
+            "• Combat simulation with cumulative statistics",
+            "• Save and load gear presets",
+            "• Statistical analysis with reset threshold calculations",
+            "• Interactive frontend built with TypeScript",
+            "• Simulation engine developed in Rust using WebAssembly for performance"
         ],
-        link: "https://github.com/Synderis/tekton_sim_app",
-        imageUrl: "https://i.imgur.com/VM2d0ll.png",
+        link: "https://github.com/Synderis/speedrunners-of-osrs",
+        imageUrl: "https://imgur.com/GRxp84H.png",
         images: [
-            "https://i.imgur.com/ZTvx1F8.gif",
-            "https://i.imgur.com/o7NPnRi.png",
-            "https://i.imgur.com/Xc6sfLb.png"
+            "https://imgur.com/GRxp84H.png",
+            "https://imgur.com/S1vN03M.png",
+            "https://imgur.com/AhrQHW4.png",
+            "https://imgur.com/lrJKcAw.png"
         ],
-        techStack: ["Python", "TypeScript", "Machine Learning", "Statistics"]
+        techStack: ["Rust", "TypeScript", "Statistics"]
     }
 ];
 
