@@ -48,15 +48,28 @@
 
 .hero-greeting {
   font-size: 1.25rem;
-  color: var(--color-gray-400);
+  color: var(--color-text-muted);
   margin-bottom: var(--spacing-sm);
   font-weight: 300;
 }
 
-.hero-name {
+/* Light mode hero name */
+[data-theme="light"] .hero-name {
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 700;
-  background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+  background: linear-gradient(135deg, var(--color-black) 0%, var(--color-slate) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.1;
+}
+
+/* Dark mode hero name */
+[data-theme="dark"] .hero-name {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-gray-200) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,7 +79,7 @@
 
 .hero-subtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: var(--color-gray-200);
+  color: var(--color-text);
   margin-bottom: var(--spacing-2xl);
   line-height: 1.4;
   max-width: 600px;
