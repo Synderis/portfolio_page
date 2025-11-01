@@ -40,28 +40,3 @@ jobs:
 
       - name: Upload build files to S3
         run: aws s3 cp dist/ s3://${{ env.S3_BUCKET }}/ --recursive
-
-      - name: Zip build files
-        run: zip -r deployment.zip dist/
-
-      - name: Upload deployment.zip to S3
-        run: aws s3 cp deployment.zip s3://${{ env.S3_BUCKET }}/deployment.zip
-
-      - name: Create Amplify deployment
-        id: amplify_deploy
-        run: |
-          DEPLOYMENT_ID=$(aws amplify create-deployment --app-id ${{ env.AMPLIFY_APP_ID }} --branch-name ${{ env.AMPLIFY_BRANCH }} --region us-east-1 --query 'jobId' --output text)
-          echo "deployment_id=$DEPLOYMENT_ID" >> $GITHUB_ENV
-        env:
-          AWS_REGION: us-east-1
-          AWS_DEFAULT_REGION: us-east-1
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-      - name: Start Amplify deployment
-        run: aws amplify start-deployment --app-id ${{ env.AMPLIFY_APP_ID }} --branch-name ${{ env.AMPLIFY_BRANCH }} --job-id ${{ env.deployment_id }} --region us-east-1
-        env:
-          AWS_REGION: us-east-1
-          AWS_DEFAULT_REGION: us-east-1
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
