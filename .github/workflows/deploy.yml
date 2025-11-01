@@ -1,0 +1,45 @@
+name: Build and Deploy to AWS Amplify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: ${{ secrets.AWS_REGION }}
+      S3_BUCKET: ${{ secrets.S3_BUCKET }}
+      AMPLIFY_APP_ID: ${{ secrets.AMPLIFY_APP_ID }}
+      AMPLIFY_BRANCH: ${{ secrets.AMPLIFY_BRANCH }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Delete S3 bucket contents
+        run: aws s3 rm s3://${{ env.S3_BUCKET }} --recursive
+
+      - name: Upload build files to S3
+        run: aws s3 cp dist/ s3://${{ env.S3_BUCKET }}/ --recursive
+
+      - name: Trigger Amplify redeploy
+        run: aws amplify start-job --app-id ${{ env.AMPLIFY_APP_ID }} --branch-name ${{ env.AMPLIFY_BRANCH }} --job-type RELEASE
