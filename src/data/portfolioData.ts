@@ -18,7 +18,7 @@ export const headlineData = {
             label: 'Email'
         },
         {
-            href: '/dylan_tocci_resume.pdf',
+            href: 'https://synderis-portfolio-page.s3.us-east-1.amazonaws.com/dylan_tocci_resume.pdf',
             icon: 'icons/resume.svg',
             label: 'Resume'
         }

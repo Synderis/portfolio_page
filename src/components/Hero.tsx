@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.8 }}
             >
               <a
-                href="/dylan_tocci_resume.pdf"
+                href="https://synderis-portfolio-page.s3.us-east-1.amazonaws.com/dylan_tocci_resume.pdf"
                 className="btn btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
