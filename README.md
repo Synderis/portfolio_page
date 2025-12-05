@@ -7,9 +7,9 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-# Dylan Tocci - Portfolio Website
+# Portfolio Website
 
-A modern, minimalist portfolio website built with React, TypeScript, and Vite. Features a sleek black, grey, and gradient color scheme with smooth animations and responsive design.
+A modern, minimalist portfolio website built with React, TypeScript, and Vite. Features a sleek black, grey, and gradient color scheme with smooth animations and responsive design. Currently hosted at https://synderis.com/.
 
 ## 🚀 Features
 
@@ -34,9 +34,20 @@ A modern, minimalist portfolio website built with React, TypeScript, and Vite. F
 ## 📱 Sections
 
 1. **Hero Section**: Introduction with portrait and call-to-action
+   
+  ![Hero Section](https://i.imgur.com/6tK0C85.png)
+
 2. **Tech Stack**: Skills showcase with interactive cards
+   
+  ![Tech Stack](https://i.imgur.com/gJSVWOE.png)
+
 3. **Experience**: Professional background and education
+   
+  ![Experience](https://i.imgur.com/7sehBfW.png)
+
 4. **Projects**: Featured projects with filtering and links
+   
+  ![Projects](https://i.imgur.com/dlT30DE.png)
 
 ## 🎨 Design System
 
@@ -68,8 +79,8 @@ A modern, minimalist portfolio website built with React, TypeScript, and Vite. F
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd portfolio_v2
+git clone https://github.com/Synderis/portfolio_page.git
+cd portfolio_page
 ```
 
 2. Install dependencies:
@@ -118,7 +129,6 @@ src/
 
 ## 🎯 Performance Features
 
-- **Code Splitting**: Automatic route-based splitting
 - **Image Optimization**: WebP format with fallbacks
 - **Lazy Loading**: Images and components loaded on demand
 - **Tree Shaking**: Unused code elimination
