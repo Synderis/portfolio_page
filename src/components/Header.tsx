@@ -165,6 +165,22 @@ const Header: React.FC<HeaderProps> = () => {
                 {item.label}
               </a>
             ))}
+            <div className="mobile-social-links">
+              {headlineData.contacts.filter(c => c.label === 'GitHub' || c.label === 'LinkedIn').map((contact) => (
+                <motion.a
+                  key={contact.label}
+                  href={contact.href}
+                  className="mobile-social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {getContactIcon(contact.label)}
+                  <span>{contact.label}</span>
+                </motion.a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
