@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
                 rel="noopener noreferrer"
               >
                 <Download size={18} />
-                Download Resume
+                Resume
               </a>
               <button
                 onClick={() => setIsAboutModalOpen(true)}

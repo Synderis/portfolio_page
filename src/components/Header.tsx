@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Moon, Sun, Mail, FileText } from 'lucide-react';
+import { Menu, X, Mail, FileText } from 'lucide-react';
 import { FiLinkedin, FiGithub } from "react-icons/fi";
 import { headlineData } from '../data/portfolioData';
 import '../css/Header.css';
@@ -10,7 +10,7 @@ interface HeaderProps {
   onThemeToggle: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ theme, onThemeToggle }) => {
+const Header: React.FC<HeaderProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -127,7 +127,7 @@ const Header: React.FC<HeaderProps> = ({ theme, onThemeToggle }) => {
               ))}
             </div>
 
-            <motion.button
+            {/* <motion.button
               className="theme-toggle"
               onClick={onThemeToggle}
               whileHover={{ scale: 1.1 }}
@@ -138,7 +138,7 @@ const Header: React.FC<HeaderProps> = ({ theme, onThemeToggle }) => {
             >
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
               <span className="sr-only">Toggle theme</span>
-            </motion.button>
+            </motion.button> */}
 
             {/* Mobile Menu Button */}
             <motion.button
