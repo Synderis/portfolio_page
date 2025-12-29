@@ -30,16 +30,16 @@ export const skills = [
         name: 'Python', href: 'https://www.python.org/', icon: '/icons/python.svg' 
     },
     { 
+        name: 'AWS', href: 'https://aws.amazon.com/', icon: '/icons/aws.svg' 
+    },
+    { 
         name: 'TypeScript', href: 'https://www.typescriptlang.org/', icon: '/icons/typescript.svg' 
     },
     { 
-        name: 'React', href: 'https://react.dev/', icon: 'icons/react.svg' 
-    },
-    { 
-        name: 'CSS', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS', icon: '/icons/css.svg' 
-    },
-    { 
         name: 'Snowflake', href: 'https://www.snowflake.com/', icon: '/icons/snowflake.svg' 
+    },
+    { 
+        name: 'React', href: 'https://react.dev/', icon: 'icons/react.svg' 
     },
     { 
         name: 'DBT', href: 'https://www.getdbt.com/', icon: '/icons/dbt.svg' 
@@ -50,8 +50,8 @@ export const skills = [
     {
         name: 'Rust', href: 'https://www.rust-lang.org/', icon: '/icons/rust.svg'
     },
-    { 
-        name: 'AWS', href: 'https://aws.amazon.com/', icon: '/icons/aws.svg' 
+    {
+        name: 'Java', href: 'https://www.java.com/', icon: '/icons/java.svg'
     }
 ];
 
@@ -187,14 +187,16 @@ export const aboutMe = {
             sectionTitle: "Gaming and Speedrunning",
             details: [
                 "When I used to seriously speedrun, I held 7th place in the world (twice) for the game Old School RuneScape in the solo Chambers of Xeric category.",
-                "I also made a few guide videos on YouTube for Old School RuneScape Chambers of Xeric speedrunning.",
-                "I also used to play a lot of League of Legends, where I peaked at diamond 3.",
-                "I also like to stream on twitch whether it be coding, gaming, coaching, or just chatting.",
+                "I made a few guide videos on YouTube for Old School RuneScape Chambers of Xeric speedrunning. I've made sims for raid strategies that has helped numerous speedrunners improve their times. Now I work and contribute to plugins for analyzing speedruns for open-source client RuneLite.",
+                "I used to play a lot of League of Legends, where I peaked at diamond 3 as a Tryndamere/Jax main.",
+                "I enjoy streaming on Twitch whether it is coding, gaming, coaching, or just chatting.",
             ],
             links: [
                 { href: 'https://youtube.com/playlist?list=PLe9vJR7gl_-O-1GZSsEq6cYLiwrR-y6pS&si=WfGeWlL3ikKIbVFR', text: 'My Speedrunning Guides' },
                 { href: 'https://youtu.be/YghSwVnY5Ds', text: 'My First Top 10 Time' },
                 { href: 'https://youtu.be/IdBLAmT9_1w', text: 'My Second Top 10 Time' },
+                { href: 'https://speedrunners-of-osrs.vercel.app/', text: 'My Solo CM Raid Simulator', imgUrl: 'https://i.imgur.com/lrJKcAw.png' },
+                { href: 'https://blert.io/', text: 'OSRS Speedrun Analyzer', imgUrl: 'https://i.imgur.com/m948KlK.png' },
                 { href: 'https://www.twitch.tv/synderis', text: 'My Twitch Channel' },
                 { href: 'https://op.gg/lol/summoners/na/SidelaneTerror-NA1', text: 'My League of Legends Profile', imgUrl: 'https://i.imgur.com/doLUNnE.png' }
 

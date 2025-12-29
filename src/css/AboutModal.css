@@ -211,7 +211,7 @@
 
 .link-image {
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--color-border);
