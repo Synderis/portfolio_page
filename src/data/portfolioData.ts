@@ -8,7 +8,7 @@ export const headlineData = {
             label: 'GitHub'
         },
         {
-            href: 'https://www.linkedin.com/in/dylan-tocci-69198929a',
+            href: 'https://www.linkedin.com/in/dylan-t-synd',
             icon: 'icons/linkedin.svg',
             label: 'LinkedIn'
         },
